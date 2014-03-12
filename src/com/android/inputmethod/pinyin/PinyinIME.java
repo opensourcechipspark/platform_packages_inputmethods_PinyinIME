@@ -1509,7 +1509,7 @@ public class PinyinIME extends InputMethodService {
         /**
          * Maximum number of candidates to display in one page.
          */
-        private static final int MAX_PAGE_SIZE_DISPLAY = 10;
+        private static final int MAX_PAGE_SIZE_DISPLAY = 20;
 
         /**
          * Spelling (Pinyin) string.
@@ -2130,5 +2130,10 @@ public class PinyinIME extends InputMethodService {
         public int getFixedLen() {
             return mFixedLen;
         }
+    }
+
+    @Override
+    public boolean onEvaluateFullscreenMode() {
+        return false;
     }
 }

@@ -100,6 +100,7 @@ public class KeyMapDream {
 
     static public char getChineseLabel(int keyCode) {
         if (keyCode <= 0 || keyCode >= KeyEvent.getMaxKeyCode()) return 0;
+	if(keyCode >= mKeyMap.length) return 0;
         assert ((mKeyMap[keyCode] & 0x000000ff) == keyCode);
         return (char) (mKeyMap[keyCode] >> SHIFT_FWCH);
     }
